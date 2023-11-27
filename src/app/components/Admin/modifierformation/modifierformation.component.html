@@ -1,0 +1,82 @@
+<header>
+    <div  >
+        <img id="logo1" src="assets/images/logo1.jpg" alt="image introuvable">
+    </div>
+    <div>
+        <h1 id="titre">Skill Wave</h1>
+    </div>
+    <div>
+        <button type="button" class="btn btn-light"  data-bs-toggle="collapse" data-bs-target=".menu" (click)="onAction()">
+            <i class="bi bi-arrow-90deg-left"></i>            
+        </button>
+    </div>
+</header>
+
+<nav>
+    <img id="ajouF" src="assets/images/formation2.jpg" alt="Indisponible">
+    
+    <form [formGroup]="ModifierFormation" (ngSubmit)="onModifierFormation()">
+
+        <input type="number" class="form-control" formControlName="id"  placeholder="ID de la Formation" [value]="formation.id"> <br>
+
+        <input type="email" class="form-control" formControlName="nom"  placeholder="Nom de la Formation"  [value]="formation.nom"> <br>
+        <div *ngIf="nom?.errors?.['required'] && nom?.touched" class="alert alert-danger">
+            Le nom de la Formation est strictement obligatoire 
+        </div>
+
+        <input type="text" class="form-control" formControlName="photo"  placeholder="Photo de la Formation" > <br>
+        <div *ngIf="isValidPatternPhoto() && photo?.dirty" class="alert alert-warning">
+            La photo doit commencer par "assets/images/..." 
+        </div>
+        <div *ngIf="photo?.errors?.['required'] && photo?.dirty" class="alert alert-danger">
+            La photo de la Formation est strictement obligatoire 
+        </div>
+
+        <input type="number" class="form-control" formControlName="prix"  placeholder="Prix de la Formation"> <br>
+        <div *ngIf="prix?.errors?.['required'] && prix?.touched" class="alert alert-danger">
+            Le prix de la Formation est strictement obligatoire 
+        </div>
+
+        <input type="date" class="form-control" formControlName="dateF"  placeholder="Date de la Formation"> <br>
+        <div *ngIf="dateF?.errors?.['required'] && dateF?.touched" class="alert alert-danger">
+            La date de la Formation est strictement obligatoire 
+        </div>
+
+        <input type="time" class="form-control" formControlName="heure"  placeholder="Heure de la Formation"> <br>
+        <div *ngIf="heure?.errors?.['required'] && heure?.touched" class="alert alert-danger">
+            L'heure de la Formation est strictement obligatoire 
+        </div>
+
+        <input type="number" class="form-control" formControlName="duree"  placeholder="Duree de la Formation"> <br>
+        <div *ngIf="duree?.errors?.['required'] && duree?.touched" class="alert alert-danger">
+            La duree de la Formation est strictement obligatoire 
+        </div>
+
+        <input type="text" class="form-control" formControlName="lieux"  placeholder="Lieux de la Formation"> <br>
+        <div *ngIf="lieux?.errors?.['required'] && lieux?.touched" class="alert alert-danger">
+            Le lieux de la Formation est strictement obligatoire 
+        </div>
+
+        <input type="number" class="form-control" formControlName="nbrParticipant"  placeholder="Maximum de Participant"> <br>
+        <div *ngIf="nbrParticipant?.errors?.['required'] && nbrParticipant?.touched" class="alert alert-danger">
+            Le nombre maximal des participants a la Formation est strictement obligatoire 
+        </div>
+
+        <input type="text" class="form-control" formControlName="description"  placeholder="Description de la Formation"> <br>
+        <div *ngIf="description?.errors?.['required'] && description?.touched" class="alert alert-danger">
+            La description de la Formation est strictement obligatoire 
+        </div>
+
+        <select  name="formateur" formControlName="format" >
+            <option selected>Select Formateur</option>
+            <option *ngFor="let f of lesFormateurs" >
+              {{f.nom|titlecase}} {{f.prenom|titlecase}}
+            </option>
+        </select> <br>
+
+        <button type="submit" class="btn btn-outline-primary" id="btn_form" >Enregistrer</button>
+    </form>
+
+</nav>
+
+

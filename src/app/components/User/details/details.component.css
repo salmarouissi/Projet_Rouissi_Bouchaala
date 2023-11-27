@@ -1,0 +1,73 @@
+ /* le css du header */
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(59deg, #5cc2f5, #161682);
+    padding: 10px;
+    height:90px;
+}
+header div {
+    display: flex;
+    align-items: center;
+}
+#logo1 {
+    width: 70px;
+    height: 70px;
+    border-radius: 5%;
+    margin-left: 20px;
+}
+
+#titre{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color:rgb(196, 242, 255);
+    margin-right: 100px;
+}
+
+
+/* le css du details */
+.container3 {
+    font-family: Arial, sans-serif;
+    margin: 60px auto;
+    background-color: #ece8e8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    
+}
+
+.image img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image:hover img {
+    transform: scale(1.1);
+}
+
+.details h2 {
+    margin-top: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #161682;
+}
+
+.details ul{
+    margin-top: 20px;
+
+}
+
+.details ul li{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.descri{
+    font-size: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+#btn1 {
+    margin-left: 250px;
+}

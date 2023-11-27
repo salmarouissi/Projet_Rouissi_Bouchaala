@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(59deg, #5cc2f5, #161682);
+    padding: 10px;
+    height:90px;
+}
+header div {
+    display: flex;
+    align-items: center;
+}
+#logo1{
+    width: 70px;
+    height: 70px;
+    border-radius: 5%;
+    margin-left: 20px;
+}
+#titre{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color:rgb(196, 242, 255);
+    margin-right: 10px;
+    margin-bottom: 10px; 
+}
+
+#aboutus{
+    width: 950px;
+    height: 450px;
+    padding-left: 200px;
+    padding-top: 30px;
+}
+
+section{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3,p{
+    padding-top: 20px;
+    text-align: center;
+}
+
+h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #95b3ee;
+    text-decoration:underline;
+}
+p{
+    color: #161682;
+}
+

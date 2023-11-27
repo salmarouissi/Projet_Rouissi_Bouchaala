@@ -1,0 +1,67 @@
+<header>
+    <div  >
+        <img id="logo" src="assets/images/logo1.jpg" alt="image introuvable">
+    </div>
+    <div>
+        <h1 id="titre">Skill Wave</h1>
+    </div>
+    <div class="d-inline-flex gap-1">
+        
+        <button type="button" class="btn btn-light"  data-bs-toggle="collapse" data-bs-target=".menu" (click)="onAcceuil()">
+            <i class="bi bi-arrow-90deg-left"></i>            
+        </button>
+
+        <button type="button" (click)="onInfo()" class="btn btn-light detPub" id="btnp">
+            <i class="bi bi-info-circle"></i>
+        </button>
+    </div> 
+</header>
+
+
+<nav >
+    <div class="container-fluid">
+        <form class="d-flex">
+            <input class="form-control me-2 custom-input" type="search" #text (input)="onRecherche(text.value)" placeholder="Nom de la Formation ...">
+            <i class="bi bi-search"></i>
+        </form>
+    </div>
+</nav>
+
+<menu>
+    <div class="container"  *ngFor="let f of lesFormationfiltre">
+        <div>
+            <img [src]="f.photo" alt="image introuvable">
+        </div>
+        <div class="profile-name" [ngClass]="{'c1':f.disponible==false}">{{f.nom |titlecase}}</div>
+        <p class="about">{{f.dateF|date}}</p>
+        <button class="msg-btn detPub" (click)="onDetails(f.id)">Details</button>
+        
+    </div>
+</menu>
+<div class="conteneur">
+    <p id="intro">
+        Chez SkillWave, nous croyons en l'autonomisation par le savoir. <br>
+        Notre club vise à inspirer, à éduquer et à transformer des aspirations en réalités concrètes. <br>
+        Rejoignez-nous dans cette aventure éducative unique, où chaque vague de compétences déferle vers un avenir prometteur. <br>
+        SkillWave: là où l'apprentissage devient une expérience transformative et où l'éducation trace la voie vers un succès durable.
+    </p>
+    
+    <div #publicite id="publicite">
+        <div class="input-group">
+            <input type="text" class="form-control" #nomAuthor placeholder="Nom de l'auteur">
+            <button type="button" class="btn btn-primary" (click)="recherche(nomAuthor.value)">Rechercher</button>
+        </div>
+        <ul>
+            <li *ngFor="let f of tab">
+                {{f.authors[0]}}--{{f.title}}
+            </li>
+        </ul>
+    </div>
+    
+</div>
+
+
+
+<app-footer></app-footer>
+
+

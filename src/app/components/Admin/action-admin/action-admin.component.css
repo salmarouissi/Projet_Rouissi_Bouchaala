@@ -1,0 +1,15 @@
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin-left: 150px;
+    padding-top: 20px;
+}
+
+
+.card {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 350px;
+}

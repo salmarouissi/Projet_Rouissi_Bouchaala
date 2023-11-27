@@ -1,0 +1,52 @@
+<div id="conteneur" style="background-image: url('assets/images/image2.jpg');">
+    <div class="main-block" >
+        <div class="left-part">
+          <i class="fas fa-graduation-cap"></i>
+          <h1>Register to our courses</h1>
+          <p>W3docs provides free learning materials for programming languages like HTML, CSS, Java Script, PHP etc.</p>
+        
+        </div>
+        <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmitForm()">
+
+          <div class="title">
+            <i class="fas fa-pencil-alt"></i> 
+            <h2>Register here</h2>
+          </div>
+
+          <div class="info">
+            <input class="fname" type="text" name="name" formControlName="nomprenom" placeholder="Full name">
+            <div *ngIf="nomprenom?.errors?.['required'] && nomprenom?.touched" class="alert alert-danger" style="color: black;">
+              Le nom et prenom sont strictement obligatoire 
+            </div>
+
+            <input type="text" name="name" formControlName="mail" placeholder="Email">
+            <div *ngIf="mail?.errors?.['required'] && mail?.touched" class="alert alert-danger" style="color: black;">
+              L'E-mail est strictement obligatoire 
+            </div>
+            <div *ngIf="isValidPattern()" class="alert alert-warning" style="color: black;">
+              L'E-mail doit être sous la forme aaa@exemple.aaa
+            </div>
+
+            <input type="text" name="name" formControlName="telephone" placeholder="Phone number">
+            <div *ngIf="telephone?.errors?.['required'] && telephone?.touched" class="alert alert-danger" style="color: black;">
+              Le numero de telephone est strictement obligatoire
+            </div>
+            <div *ngIf="telephone?.invalid && telephone?.dirty" class="alert alert-danger" style="color: black;">
+              Le numero de telephone a une longueur maximale de 8
+            </div>
+
+          </div>
+          
+         
+          <button type="submit"  >Inscrit</button>
+          <button type="button" class="btn btn-success" (click)="onDetails()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"></path>
+              </svg>
+              Retourner
+          </button>
+        </form>
+      </div>
+    
+    </div>
+    

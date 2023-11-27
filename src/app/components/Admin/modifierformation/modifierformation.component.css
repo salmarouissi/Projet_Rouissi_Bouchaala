@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(59deg, #5cc2f5, #161682);
+    padding: 10px;
+    height:90px;
+}
+header div {
+    display: flex;
+    align-items: center;
+}
+#logo1 {
+    width: 70px;
+    height: 70px;
+    border-radius: 5%;
+    margin-left: 20px;
+}
+#logo2 {
+    width: 70px;
+    height: 70px;
+    border-radius: 5%;
+    margin-left: 150px;
+}
+#titre{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color:rgb(196, 242, 255);
+    margin-right: 50px;
+}
+form{
+    margin-left: 250px;
+    margin-right:100px;
+    width: 700px;
+}
+#ajouF{
+    margin-left: 250px;
+    margin-right:100px;
+    padding-top: 50px;
+    width: 700px;
+    height: 300px;
+}
+#btn_form{
+    margin-left: 300px;
+    margin-top: 50px;
+}

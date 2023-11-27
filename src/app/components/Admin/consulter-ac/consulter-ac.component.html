@@ -1,0 +1,61 @@
+<header>
+    <div  >
+        <img id="logo1" src="assets/images/logo1.jpg" alt="image introuvable">
+    </div>
+    <div>
+        <h1 id="titre">Skill Wave</h1>
+    </div>
+    <div>
+        <button type="button" class="btn btn-light"  data-bs-toggle="collapse" data-bs-target=".menu" (click)="onAction()">
+            <i class="bi bi-arrow-90deg-left"></i>            
+        </button>
+    </div>
+</header>
+<section>
+
+    <nav >
+        <div class="container-fluid">
+            <form class="d-flex">
+                <input class="form-control me-2 custom-input" type="search" #text (input)="onRecherche(text.value)" placeholder="Formation">
+                <i class="bi bi-search"></i>
+            </form>
+        </div>
+    </nav>
+
+    <div>
+        <table class="table ">
+            <tr>
+                <th style="color: rgb(39, 51, 142);padding-left: 10px;">ID</th>
+                <th style="color:rgb(39, 51, 142);">Formation</th>
+                <th style="color: rgb(39, 51, 142);">Prix</th>
+                <th style="color: rgb(39, 51, 142);padding-left: 10px;">Date</th>
+                <th style="color: rgb(39, 51, 142);">Heure</th>
+                <th style="color: rgb(39,51,142);">Durée</th>
+                <th style="color: rgb(39,51,142);">Lieux</th>
+                <th style="color: rgb(39,51,142);">Restant</th>
+                <th style="color:rgb(39,51,142);">Action</th>
+            </tr>
+
+            <tr style="background-color: #ede6e691;" *ngFor="let f of lesFormationfiltre" >
+                <td id="id">{{f.id}}</td>
+                <td>{{f.nom|titlecase}}</td>
+                <td id="prix">{{f.prix|pipeCurrencyTn}}</td>
+                <td>{{f.dateF|date}}</td>
+                <td>{{f.heure}}</td>
+                <td>{{f.duree}}H</td>
+                <td>{{f.lieux|titlecase}}</td>
+                <td>{{f.nbrParticipant}} Personne</td>
+                <td>
+                    <button  class="btn btn-outline-info boutton" (click)="onModifierFormation(f.id)"><i class="bi bi-pencil-square"></i></button>
+                </td>
+                <td>
+                    <button class="btn btn-outline-info boutton" id="corbeille" (click)="deleteFormation(f.id)"><i class="bi bi-trash"></i></button>
+                </td>
+            </tr>
+        </table>
+        <button  class="btn btn-outline-primary ajout" (click)="onAjouterFormation()">Ajouter Formation</button>
+
+    </div>
+</section>
+
+

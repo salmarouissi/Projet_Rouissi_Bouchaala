@@ -1,0 +1,42 @@
+<header>
+    <div  >
+        <img id="logo1" src="assets/images/logo1.jpg" alt="image introuvable">
+    </div>
+    <div>
+        <h1 id="titre">Skill Wave</h1>
+    </div>
+    <div>
+        <button type="button" class="btn btn-light"  data-bs-toggle="collapse" data-bs-target=".menu" (click)="onAction()">
+            <i class="bi bi-arrow-90deg-left"></i>            
+        </button>
+    </div>
+</header>
+
+    <form [formGroup]="ajoutFormateurForm" (ngSubmit)="onSubmitForm()" >
+        <input type="number" class="form-control" formControlName="id" name="id" placeholder="ID du Formateur"> <br>
+        
+        <input type="text" class="form-control" formControlName="nom" name="nom" placeholder="Nom du Formateur"> <br>
+        <div *ngIf="nom?.errors?.['required'] && nom?.touched" class="alert alert-danger">
+            Le nom du Formateur est strictement obligatoire 
+        </div>
+
+        <input type="text" class="form-control" formControlName="prenom" name="prenom"  placeholder="Prénom du Formateur"> <br>
+        <div *ngIf="prenom?.errors?.['required'] && prenom?.touched" class="alert alert-danger">
+            Le prenom du Formateur est strictement obligatoire 
+        </div>
+
+        <input type="text" class="form-control" formControlName="typeformation" name="prenom"  placeholder="Type de Formation"> <br>
+        <div *ngIf="typeformation?.errors?.['required'] && typeformation?.touched" class="alert alert-danger">
+            Le type de Formation du Formateur est strictement obligatoire 
+        </div>
+
+        <i class="bi bi-exclamation-triangle"></i><span style="color: crimson;text-decoration:underline;"> LE GENRE DU FORMATEUR EST STRICTEMENT OBLIGATOIRE !</span> <br>
+        <input class="form-check-inline" type="radio" formControlName="genre" name="genre" value="homme" checked>Homme
+        <input class="form-check-inline" type="radio" formControlName="genre" name="genre" value="femme">Femme
+
+        <div id="btn_form">
+            <button type="submit" class="btn btn-outline-primary" >Enregistrer</button>
+        </div>
+    </form>
+
+

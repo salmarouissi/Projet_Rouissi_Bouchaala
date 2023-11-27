@@ -1,0 +1,165 @@
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(59deg, #5cc2f5, #161682);
+        padding: 10px;
+        height:90px;
+    }
+    header div {
+        display: flex;
+        align-items: center;
+    }
+    #logo {
+        width: 70px;
+        height: 70px;
+        border-radius: 5%;
+        margin-left: 20px;
+    }
+    #titre{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 50px;
+        color:rgb(196, 242, 255);
+        margin-right: 10px;
+        margin-bottom: 10px;
+        
+    }
+
+    #intro{
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border-radius: 50px;
+        color: #1919b3;
+        font-size: 15px;
+        margin-top: 50px; 
+        margin-left: 20px;
+
+    }
+
+    menu {
+        font-family: Montserrat, sans-serif;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding-right: 70px;
+
+    }
+
+    .container {
+        user-select: none;
+        margin: 10px;
+        background:#0d0d60;
+        color: rgb(135, 206, 245) ;
+        border-radius: 5px;
+        width: 250px;
+        text-align: center;
+        margin-left: 60px;
+    }
+
+    menu div div img{
+        width: 230px;
+        height: 150px;
+        border-radius: 5px 5px 0 0;
+
+    }
+
+    .bi-search{
+        padding-top: 10px;
+    }
+
+
+    .profile-name {
+        font-size: 25px;
+        font-weight: bold;
+        padding: 0px 10;
+        margin: 27px 0 0 5px;
+    }
+
+    .about {
+        margin-top: 35px;
+        line-height: 21px;
+    }
+
+    .detPub{
+        margin: 10px 0 40px 0;
+    }
+
+    .msg-btn  {
+        background-color: rgba(242, 209, 197, 0.872) ;
+        border: 1px solid ;
+        padding: 10px 25px;
+        color: #19152c;
+        border-radius: 3px;
+        font-family: Montserrat, sans-serif;
+        cursor: pointer;
+    }
+    
+    .msg-btn:hover{
+        background-color:rgba(248, 200, 183, 0.932) ;
+    }
+
+    #btnp{
+        margin-top: 40px;
+    }
+
+    .container i {
+        padding-left: 20px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .container i:hover {
+        color: #03bfbc;
+    }
+
+    .custom-input {
+        height: 46px;
+    }
+
+    nav div form input{
+        border: #3131bc 3px solid;
+    }
+
+    nav{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .c1 {
+        color:red;
+    }
+ 
+    .container2{
+        margin-left: 40px;
+    }
+
+    ul{
+        list-style: none;
+    }
+    ul li{
+        font-size: 20px;
+        color:white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding-top: 10px;
+    }
+
+    #publicite {
+        width: 1000px;
+        background-image: url("https://i.ebayimg.com/images/g/gUAAAOSwWtRiAzCt/s-l1200.webp");  
+        margin-top: 50px; 
+        padding: 10px; 
+        text-align: center;
+        border-radius: 5px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .conteneur{
+        display: flex;
+    }

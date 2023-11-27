@@ -1,0 +1,80 @@
+<div id="container">
+<div id="carouselbackground" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="background" style="background-image: url('assets/images/background.jpg') ;" >
+            <div class="d-block w-100" style="background: rgba(24, 29, 56, .7);height: 600px;">
+                <div class="d-inline-flex gap-1">
+                    <div class="col-sm-10 col-lg-8">
+                        <h1 id="h1_background">SkillWave</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="background" style="background-image: url('assets/images/background.jpg') ;" >
+            <div class="d-block w-100" style="background: rgba(24, 29, 56, .7);height: 600px;">
+                <div class="d-inline-flex gap-1">
+                    <div class="col-sm-10 col-lg-8">
+                        <h2 id="h2_background">The Best Learning Platform</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="background" style="background-image: url('assets/images/background.jpg') ;">
+            <div class="d-block w-100" style="background: rgba(24, 29, 56, .7);height: 600px;">
+                <div class="d-inline-flex gap-1">
+                    <div class="col-sm-10 col-lg-8">
+                        <p id="p_background" >Bienvenue sur la plateforme de SkillWave, là où chaque membre devient une vague de compétence, créant un océan d'excellence partagée. Plongez, évoluez, excellez!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<div id="slide">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselbackground" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselbackground" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+</div>
+
+
+<nav>
+    <div  class="hoverable" id="hov1" (click)="onLogin()">
+        <div class="conteneur" >
+            <div class="card" style="width:250px;"  >
+                <img src="assets/images/admin.png" alt="image introuvable" >
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align:center;color: darkblue;">Administrateur</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div>
+        <div class="hoverable" id="hov2" (click)="onAcceuilUser()">
+            <div class="conteneur">
+                <div class="card" style="width: 250px;" >
+                    <img src="assets/images/visiteur.png" alt="image introuvable" >
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;color: darkblue;">Visiteur</h5>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>       
+</nav>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,166 @@
+{
+  "formation": [
+    {
+      "id": 1,
+      "nom": "Initiation Web",
+      "photo": "assets/images/initiation.jpg",
+      "prix": 80,
+      "dateF": "2024-08-29",
+      "heure": "14:00",
+      "duree": 40,
+      "lieux": "isetch",
+      "nbrParticipant": 4,
+      "disponible": true,
+      "description": "cette formation vous propose une éducation de debutant qui consiste à apprendre : HTML5 CSS3 Bootstrap et JavaScript",
+      "format": "Bouchaala Abdelatif",
+      "personneInscri": [
+        {
+          "nomprenom": "hachicha khadija",
+          "mail": "khadijahachicha@gmail.com",
+          "telephone": "56895475"
+        },
+        {
+          "nomprenom": "djemai ahmed",
+          "mail": "ahmeddjemai@gmail.com",
+          "telephone": "96584210"
+        },
+        {
+          "nomprenom": "malek bouchaala",
+          "mail": "malekbouchaala@gmail.com",
+          "telephone": "71254896"
+        },
+        {
+          "nomprenom": "chenini ines",
+          "mail": "cheniniines@gmail.com",
+          "telephone": "95412365"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nom": "Web Avance",
+      "photo": "assets/images/webavance.png",
+      "prix": 150,
+      "dateF": "2023-12-01",
+      "heure": "12:00",
+      "duree": 52,
+      "lieux": "isetch",
+      "nbrParticipant": 0,
+      "disponible": false,
+      "description": "cette formation vous propose une éducation avancé qui consiste à apprendre : Angular et SpringBoot",
+      "format": "bouchaala abdelatif",
+      "personneInscri": [
+        {
+          "nomprenom": "djemai ahmed",
+          "mail": "ahmeddjemai@gmail.com",
+          "telephone": "96584210"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "Communication",
+      "photo": "assets/images/communication.png",
+      "prix": 50,
+      "dateF": "2024-01-15",
+      "heure": "14:00",
+      "duree": 52,
+      "lieux": "MSB",
+      "nbrParticipant": 15,
+      "disponible": true,
+      "description": "cette formation vous propose une éducation en communication d'entreprise",
+      "format": "Bouhaja Abdou",
+      "personneInscri": [
+        {
+          "nomprenom": "hachicha khadija",
+          "mail": "khadijahachicha@gmail.com",
+          "telephone": "56895475"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nom": "marketing",
+      "photo": "assets/images/former.jpg",
+      "prix": 70,
+      "dateF": "2024-10-12",
+      "heure": "14:00",
+      "duree": 30,
+      "lieux": "skillwave local",
+      "nbrParticipant": 0,
+      "description": "cette formation vous propose une éducation en marketing",
+      "format": "Sallemi Asma",
+      "personneInscri": [
+        {
+          "nomprenom": "djemai skander",
+          "mail": "skanderdjemai@gmail.com",
+          "telephone": "21548627"
+        },
+        {
+          "nomprenom": "syrine abdallah",
+          "mail": "syrineabdallah@gmail.com",
+          "telephone": "52548751"
+        }
+      ],
+      "disponible": false
+    }
+  ],
+  "formateur": [
+    {
+      "id": 1,
+      "nom": "Rouissi",
+      "prenom": "Salma",
+      "typeformation": "Initiation Web",
+      "genre": "femme"
+    },
+    {
+      "id": 2,
+      "nom": "Bouchaala",
+      "prenom": "Abdelatif",
+      "typeformation": "Web Avance",
+      "genre": "homme"
+    },
+    {
+      "id": 3,
+      "nom": "Dammak",
+      "prenom": "Sonia",
+      "typeformation": "communication",
+      "genre": "femme"
+    },
+    {
+      "id": 4,
+      "nom": "sallemi",
+      "prenom": "asma",
+      "typeformation": "marketing",
+      "genre": "femme"
+    },
+    {
+      "id": 5,
+      "nom": "bouhaja",
+      "prenom": "abdou",
+      "typeformation": "public speaking",
+      "genre": "homme"
+    },
+    {
+      "id": 6,
+      "nom": "ben ahmed",
+      "prenom": "mustapha",
+      "typeformation": "digital marketing",
+      "genre": "homme"
+    },
+    {
+      "id": 7,
+      "nom": "bouchaala",
+      "prenom": "mayssenne",
+      "typeformation": "comptabilite",
+      "genre": "femme"
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "Skill2023"
+    }
+  ]
+}

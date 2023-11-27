@@ -1,0 +1,50 @@
+<header>
+    <div>
+        <img id="logo1" src="assets/images/logo1.jpg" alt="image introuvable">
+    </div>
+    <div>
+        <h1 id="titre">Skill Wave</h1>
+    </div>
+    <div>
+      <button type="button" class="btn btn-light"  data-bs-toggle="collapse" data-bs-target=".menu" (click)="onAcceuil()">
+          <i class="bi bi-arrow-90deg-left"></i>            
+      </button>
+    </div>
+</header>
+
+<section  class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form [formGroup]="loginForm" (ngSubmit)="onAuthentif()">
+
+            <div class="form-outline mb-4">
+                <label class="form-label" >Admin Name</label>
+                <input type="text"  class="form-control form-control-lg" formControlName="username" placeholder="Enter a valid user name"  />
+            </div>
+            <div *ngIf="username?.errors?.['required'] && username?.touched" class="alert alert-danger">
+              le champ username est obligatoire 
+            </div>
+  
+            <div class="form-outline mb-3">
+                <label class="form-label" >Password</label>
+                <input type="password" class="form-control form-control-lg" formControlName="password" placeholder="Enter password"  />
+            </div>
+            <div *ngIf="password?.errors?.['required'] && password?.touched" class="alert alert-danger">
+              le mot de passe est strictement obligatoire 
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button id="bout" type="submit" class="btn" >Login</button>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+
+</section>
+<app-footer></app-footer>

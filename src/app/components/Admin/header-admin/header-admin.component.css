@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(59deg, #5cc2f5, #161682);
+    padding: 10px;
+    height:90px;
+}
+header div {
+    display: flex;
+    align-items: center;
+}
+#logo1 {
+    width: 70px;
+    height: 70px;
+    border-radius: 5%;
+    margin-left: 20px;
+}
+#titre{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color:rgb(196, 242, 255);
+    margin-right: 100px;
+}

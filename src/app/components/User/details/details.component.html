@@ -1,0 +1,41 @@
+<header>
+    <div  >
+        <img id="logo1" src="assets/images/logo1.jpg" alt="image introuvable">
+    </div>
+    <div>
+        <h1 id="titre">Skill Wave</h1>
+    </div>
+    <div class="d-inline-flex gap-1">
+        <button type="button" class="btn btn-light"  data-bs-toggle="collapse" data-bs-target=".menu" (click)="onAcceuilUser()">
+            <i class="bi bi-arrow-90deg-left"></i>            
+        </button>
+    </div>
+</header>
+
+<div class="container3">
+<div class="row">
+    <div class="col-md-4">
+        <div class="image">
+            <img src="assets/images/image2.jpg" alt="Description de l'image" class="img-fluid rounded shadow">
+        </div>
+    </div>
+    <div class="col-md-8 align-self-center">
+        <div class="details">
+            <h2>{{form.nom|titlecase}}</h2>
+            <ul>
+                <li>Prix : {{form.prix |pipeCurrencyTn }}</li>
+                <li>Heure : {{form.heure}} H</li>
+                <li>Durée : {{form.duree}}H</li>
+                <li>Lieux : {{form.lieux|titlecase}}</li>
+                <li>Formateur: {{form.format|titlecase}}</li>
+            </ul>        
+            <div class="descri">
+                <p>{{form.description | pipeDescri |titlecase}}</p>
+            </div>
+        </div>
+        <button id="btn1" class="btn btn-warning" [disabled]="!form.disponible" (click)="onInscri(form.id)">Inscrire</button>
+    </div>
+</div>
+</div>
+
+<app-footer></app-footer>

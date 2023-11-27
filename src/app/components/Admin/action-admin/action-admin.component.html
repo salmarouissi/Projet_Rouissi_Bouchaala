@@ -1,0 +1,58 @@
+<app-header-admin></app-header-admin>
+
+<nav>
+    <ul >
+        <li class="collapse  menu">
+            <button type="button" (click)="onConsulter()" class="btn btn-primary bout" >
+                Consulter Activite
+            </button>
+        </li>
+        <li class="collapse  menu">
+            <button type="button" class="btn btn-primary bout" (click)="onAjouterformation()">
+                Ajouter Formation
+            </button>
+        </li>
+        <li class="collapse  menu">
+            <button type="button" class="btn btn-primary bout"  (click)="onChangerMDP()">
+                Changer Mot de passe
+            </button>
+        </li>
+    </ul>
+</nav>
+
+<section  style="background-color: #eee;" >
+    <menu >
+      <div class="container py-5 h-100" >
+        <div class="row justify-content-center align-items-center" >
+          <div class="col-md-6 col-xl-4" *ngFor="let f of lesFormateurs" >
+            <div class="card" style="border-radius: 15px;" >
+              <div class="card-body text-center" >
+                <div class="mt-3 mb-4" *ngIf="f.genre=='femme'">
+                  <img src="assets/images/femme.png" class="rounded-circle img-fluid" style="width: 100px;height: 100px;" />
+                </div>
+                <div class="mt-3 mb-4" *ngIf="f.genre=='homme'">
+                  <img src="assets/images/homme.png" class="rounded-circle img-fluid" style="width: 100px;height: 100px;" />
+                </div>
+                <h4 class="mb-2">{{f.nom | titlecase}} {{f.prenom | titlecase}}</h4>
+                <p class="text-muted mb-4">{{f.typeformation | titlecase}}</p>
+                <div class="mb-4 pb-2">
+                  <button type="button" class="btn btn-outline-primary btn-floating">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-primary btn-floating">
+                    <i class="fab fa-linkedin-in fa-lg"></i>
+                  </button>
+                </div>
+                <div class="d-flex justify-content-between text-center mt-5 mb-2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <button class="btn btn-warning col-md-6 col-xl-4" (click)="onajoutFormateur()"><i class="bi bi-person-plus"></i></button>
+          </div>
+        </div>
+      </div>
+    </menu>
+</section>
+
+
